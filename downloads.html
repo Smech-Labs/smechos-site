@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Downloads -- SmechOS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="logo.jpg" alt="SmechOS logo">
+      <span class="brand-name">SmechOS</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html#solutions">Solutions</a>
+      <a href="index.html#vision">Vision</a>
+      <a href="index.html#performance">Performance</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="btn btn-outline header-cta" href="downloads.html">Downloads</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="about" id="downloads-intro">
+    <h2>Downloads</h2>
+    <p>Every release below is early and clearly labeled as such. Checksums
+       are published so you can verify what you downloaded actually matches
+       what was built -- always verify before installing, especially while
+       SmechOS is still in beta.</p>
+  </section>
+
+  <section class="downloads-list">
+    <article class="download-card">
+      <div class="download-card-header">
+        <h3>netinst installer -- v0.1.0-beta</h3>
+        <span class="badge badge-beta">Early Beta</span>
+      </div>
+      <p>Boots and walks through the full install wizard (language, timezone,
+         hardware detection, partitioning, network, profile selection,
+         microcode check, GRUB install). Package-fetch steps depend on the
+         <code>spk-repo-gun</code> package repository being reachable. Not yet
+         verified for a full end-to-end install on real hardware -- treat
+         this as a boot/UX preview.</p>
+      <dl class="download-meta">
+        <dt>Released</dt>
+        <dd>2026-06-25</dd>
+        <dt>Size</dt>
+        <dd>62 MB</dd>
+        <dt>SHA-256</dt>
+        <dd><code>0b67ec3782834090a9dd2bf8c7068d9cfa028500beebab4e3d7f63b4120e5f38</code></dd>
+        <dt>MD5</dt>
+        <dd><code>38201253c58e571ffe46bd6eadee89e0</code></dd>
+      </dl>
+      <div class="download-actions">
+        <a class="btn btn-primary" href="https://github.com/Smech-Labs/SmechDeploy/releases/download/v0.1.0-beta-netinst/smechos-installer-minimal-netinst.iso">Download .iso</a>
+        <a class="btn btn-outline" href="https://github.com/Smech-Labs/SmechDeploy/releases/tag/v0.1.0-beta-netinst">Release Notes</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="about" id="verify">
+    <h2>Verifying Your Download</h2>
+    <p>After downloading, compare the file's checksum against the value
+       listed above before writing it to a disk or booting it:</p>
+    <pre class="verify-cmd">sha256sum smechos-installer-minimal-netinst.iso</pre>
+    <p>If the output doesn't match exactly, don't use the file -- re-download
+       it instead.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <img class="footer-logo" src="logo.jpg" alt="SmechOS logo">
+  <p class="footer-brand">SmechOS</p>
+  <p>Contact us: <a href="mailto:smechos@protonmail.com">smechos@protonmail.com</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

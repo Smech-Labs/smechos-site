@@ -19,16 +19,4 @@
       navToggle.setAttribute("aria-expanded", "false");
     });
   });
-
-  // The real Wix site's "Download Now" button currently points at an empty
-  // file-share library (confirmed by interactively clicking it -- see
-  // functional_spec.txt). Rather than fake a working download link, this
-  // reveals an honest status message instead.
-  var downloadBtn = document.getElementById("downloadBtn");
-  var downloadNote = document.getElementById("downloadNote");
-
-  downloadBtn.addEventListener("click", function () {
-    downloadNote.hidden = false;
-    downloadBtn.disabled = true;
-  });
 })();
