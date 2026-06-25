@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmechOS -- An Independent, Sovereign Linux Distribution</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#home">
+      <img class="brand-logo" src="logo.jpg" alt="SmechOS logo">
+      <span class="brand-name">SmechOS</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#solutions">Solutions</a>
+      <a href="#vision">Vision</a>
+      <a href="#performance">Performance</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-outline header-cta" href="#cta">Download Now</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1>An Independent Linux Distribution, Built From Its Own Pipeline</h1>
+      <p class="hero-sub">KDE Plasma 6 on top. A custom build system underneath. Nothing borrowed for the sake of a label.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#solutions">Explore Now</a>
+        <a class="btn btn-outline" href="#cta">Download Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About SmechOS</h2>
+    <p>SmechOS is an independent Linux distribution with its own custom build
+       system -- not a rebrand or derivative of an existing distro. The
+       desktop is KDE Plasma 6. The package manager is <code>spk</code>,
+       built specifically for SmechOS. Every part of the pipeline, from
+       kernel compilation to the installer, is maintained as part of the
+       project itself.</p>
+  </section>
+
+  <section class="solutions" id="solutions">
+    <h2>What's Actually In SmechOS</h2>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <div class="feature-icon feature-icon-layers" aria-hidden="true"></div>
+        <h3>spk -- the SmechOS Package Manager</h3>
+        <p><code>spk</code> is SmechOS's own package manager: <code>spk
+           system-install</code> for the base system, <code>spk
+           userland-install</code> for desktop apps, and <code>spk
+           entire-system-upgrade</code> to bring the whole machine forward.
+           Built for this distro specifically, not adapted from another
+           one.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon feature-icon-facet" aria-hidden="true"></div>
+        <h3>A Real Installer</h3>
+        <p>The SmechOS installer is a from-scratch wizard covering
+           partitioning, network setup, profile selection, and bootloader
+           installation -- built to run reliably on real hardware and
+           virtual machines alike, not bolted on after the fact.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon feature-icon-people" aria-hidden="true"></div>
+        <h3>KDE Plasma 6 Desktop</h3>
+        <p>SmechOS ships KDE Plasma 6 as its desktop environment, integrated
+           directly into the system's own build pipeline rather than pulled
+           in as an unmodified third-party package.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="vision" id="vision">
+    <div class="vision-block">
+      <h2>Our Mission</h2>
+      <p>SmechOS exists so that running an operating system doesn't mean
+         handing control of it to someone else. That means an independent
+         build system, a package manager built for this distro specifically,
+         and an installer that's actually maintained rather than assumed to
+         "just work" because it was copied from elsewhere.</p>
+    </div>
+    <div class="vision-block">
+      <h2>Our Story</h2>
+      <p>SmechOS is built and maintained as an active, ongoing project --
+         compiling its own kernel, building its own installer, and hosting
+         its own packages. It's still early, and the project is upfront about
+         what's finished and what isn't, rather than presenting placeholder
+         content as a finished product.</p>
+    </div>
+  </section>
+
+  <section class="performance" id="performance">
+    <h2>Built, Not Borrowed</h2>
+    <p>The kernel is compiled as part of the SmechOS build pipeline, not
+       shipped unmodified from somewhere else. The installer, the package
+       manager, and the bootloader setup are all maintained in the same
+       project, so there's one place to look when something needs fixing --
+       not five unrelated upstreams to chase down.</p>
+  </section>
+
+  <section class="cta" id="cta">
+    <h2>Follow SmechOS as It's Built</h2>
+    <button class="btn btn-primary" id="downloadBtn">Download Now</button>
+    <p class="cta-note" id="downloadNote" hidden>
+      SmechOS isn't packaged for public download yet -- check back soon, or
+      follow the project's progress on its source repository.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <img class="footer-logo" src="logo.jpg" alt="SmechOS logo">
+  <p class="footer-brand">SmechOS</p>
+  <p>Contact us: <a href="mailto:smechos@protonmail.com">smechos@protonmail.com</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
