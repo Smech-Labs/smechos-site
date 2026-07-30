@@ -32,22 +32,22 @@
 
   <section class="about" id="downloads-intro">
     <h2>Downloads</h2>
-    <p>Every release below is early and clearly labeled as such. Checksums
-       are published so you can verify what you downloaded actually matches
-       what was built -- always verify before installing, especially while
-       SmechOS is still in beta.</p>
+    <p>This is a Release Candidate, not a stable release -- clearly labeled
+       as such. Checksums are published so you can verify what you
+       downloaded actually matches what was built -- always verify before
+       installing.</p>
   </section>
 
   <section class="downloads-list">
 
     <article class="download-card">
       <div class="download-card-header">
-        <h3>SmechOS KDE Plasma Live -- v1.0.0-alpha</h3>
-        <span class="badge badge-alpha">Early Alpha</span>
+        <h3>SmechOS 1.0 Release Candidate 1</h3>
+        <span class="badge badge-beta">Release Candidate</span>
       </div>
       <p>Bootable live ISO with KDE Plasma 6 running on a
-         <strong>systemd + glibc</strong> base. Boot straight into a full
-         desktop session with no installation required. Includes
+         <strong>systemd + glibc</strong> base, with a working autologin
+         straight to desktop -- verified on real hardware. Includes
          <strong>Google Chrome</strong>, <strong>Plasma Discover</strong>
          (backed by the SPK PackageKit backend), and the
          <strong>Calamares</strong> graphical installer to optionally commit
@@ -55,46 +55,25 @@
          Install via Calamares.</p>
       <dl class="download-meta">
         <dt>Released</dt>
-        <dd>2026-07-03</dd>
+        <dd>2026-07-30</dd>
         <dt>Platform</dt>
         <dd>x86_64 bare metal / VM</dd>
         <dt>Init system</dt>
-        <dd>systemd 256.7</dd>
+        <dd>systemd 261</dd>
         <dt>Desktop</dt>
-        <dd>KDE Plasma 6.3.4</dd>
-        <dt>SHA-256</dt>
-        <dd><code>TBD</code></dd>
-        <dt>MD5</dt>
-        <dd><code>TBD</code></dd>
-      </dl>
-      <div class="download-actions">
-        <a class="btn btn-primary" href="https://github.com/Smech-Labs/SmechDeploy/releases/download/v1.0.0-alpha-plasma-live/smechos-plasma-live.iso">Download .iso</a>
-        <a class="btn btn-outline" href="https://github.com/Smech-Labs/SmechDeploy/releases/tag/v1.0.0-alpha-plasma-live">Release Notes</a>
-      </div>
-    </article>
-
-    <article class="download-card">
-      <div class="download-card-header">
-        <h3>netinst installer -- v0.1.0-beta</h3>
-        <span class="badge badge-beta">Early Beta</span>
-      </div>
-      <p>Minimal network installer ISO. Boots into a TUI wizard (language,
-         timezone, hardware detection, partitioning, network, profile
-         selection, microcode check, GRUB install). Requires a wired
-         internet connection during install.</p>
-      <dl class="download-meta">
-        <dt>Released</dt>
-        <dd>2026-06-25</dd>
+        <dd>KDE Plasma 6.7.2 (KDE Frameworks 6.27.0)</dd>
+        <dt>Kernel</dt>
+        <dd>Linux 6.12.16</dd>
         <dt>Size</dt>
-        <dd>62 MB</dd>
+        <dd>~1.28 GiB</dd>
         <dt>SHA-256</dt>
-        <dd><code>0b67ec3782834090a9dd2bf8c7068d9cfa028500beebab4e3d7f63b4120e5f38</code></dd>
+        <dd><code>2338c95d3cc288f5f41b281911d89e934c1750d62004a0172c183f59bf82f296</code></dd>
         <dt>MD5</dt>
-        <dd><code>38201253c58e571ffe46bd6eadee89e0</code></dd>
+        <dd><code>ba4212a4ddac0163981baf6b63bf0283</code></dd>
       </dl>
       <div class="download-actions">
-        <a class="btn btn-primary" href="https://github.com/Smech-Labs/SmechDeploy/releases/download/v0.1.0-beta-netinst/smechos-installer-minimal-netinst.iso">Download .iso</a>
-        <a class="btn btn-outline" href="https://github.com/Smech-Labs/SmechDeploy/releases/tag/v0.1.0-beta-netinst">Release Notes</a>
+        <a class="btn btn-primary" href="https://github.com/Smech-Labs/smechlabs-iso-files/releases/download/smechos-1.0-rc1/SmechOS-1.0-RC1.iso">Download .iso</a>
+        <a class="btn btn-outline" href="https://github.com/Smech-Labs/smechlabs-iso-files/releases/tag/smechos-1.0-rc1">Release Notes</a>
       </div>
     </article>
 
@@ -104,8 +83,7 @@
     <h2>Verifying Your Download</h2>
     <p>After downloading, compare the file's checksum against the value
        listed above before writing it to a disk or booting it:</p>
-    <pre class="verify-cmd">sha256sum smechos-plasma-live.iso
-sha256sum smechos-installer-minimal-netinst.iso</pre>
+    <pre class="verify-cmd">sha256sum SmechOS-1.0-RC1.iso</pre>
     <p>If the output doesn't match exactly, don't use the file -- re-download
        it instead.</p>
   </section>
