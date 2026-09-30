@@ -18,7 +18,7 @@
   "description": "SmechOS is an independent Linux distribution built entirely from source -- not based on Gentoo, Ubuntu, or Arch. Includes its own kernel build, KDE Plasma 6 desktop, and the spk package manager.",
   "url": "https://os.smech.xyz",
   "downloadUrl": "https://os.smech.xyz/downloads.html",
-  "softwareVersion": "1.0 Release Candidate 2",
+  "softwareVersion": "1.0 Release Candidate 3",
   "publisher": {
     "@type": "Organization",
     "name": "Smech Labs",
@@ -36,12 +36,12 @@
       <span class="brand-name">SmechOS</span>
     </a>
     <nav class="nav" id="nav">
-      <a href="#solutions">Solutions</a>
-      <a href="#vision">Vision</a>
-      <a href="#performance">Performance</a>
-      <a href="#contact">Contact</a>
+      <a href="#solutions">inside</a>
+      <a href="#vision">why</a>
+      <a href="#cta">releases</a>
+      <a href="#contact">contact</a>
     </nav>
-    <a class="btn btn-outline header-cta" href="downloads.html">Downloads</a>
+    <a class="btn btn-outline header-cta" href="downloads.html">downloads</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -51,19 +51,33 @@
 <main>
 
   <section class="hero" id="home">
-    <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-content">
-      <h1>An Independent Linux Distribution, Built From Its Own Pipeline</h1>
-      <p class="hero-sub">KDE Plasma 6 on top. A custom build system underneath. Nothing borrowed for the sake of a label.</p>
+      <div class="eyebrow">SmechOS 1.0 Release Candidate 3 -- x86_64</div>
+      <h1>An independent Linux distribution, built from its own pipeline.</h1>
+      <p class="hero-sub">Not a rebrand. Not a respin. Own kernel build, own installer,
+         own package manager, KDE Plasma 6 on top. Everything in this
+         pipeline is maintained in this project, not borrowed from one.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#solutions">Explore Now</a>
-        <a class="btn btn-outline" href="downloads.html">Download Now</a>
+        <a class="btn btn-primary" href="downloads.html">download</a>
+        <a class="btn btn-outline" href="#solutions">what's inside</a>
+        <a class="btn btn-outline" href="https://github.com/Smech-Labs" target="_blank" rel="noopener">source</a>
       </div>
     </div>
   </section>
 
+  <section class="facts" aria-label="Quick specs">
+    <dl class="facts-inner">
+      <div class="fact"><dt>Kernel</dt><dd>Linux 6.12.16</dd></div>
+      <div class="fact"><dt>Desktop</dt><dd>KDE Plasma 6.6.6 LTS</dd></div>
+      <div class="fact"><dt>Init</dt><dd>systemd 261</dd></div>
+      <div class="fact"><dt>Packages</dt><dd>spk 2.1.0</dd></div>
+      <div class="fact"><dt>Arch</dt><dd>x86_64</dd></div>
+      <div class="fact"><dt>Status</dt><dd>RC3, unstable</dd></div>
+    </dl>
+  </section>
+
   <section class="about" id="about">
-    <h2>About SmechOS</h2>
+    <h2>About</h2>
     <p>SmechOS is an independent Linux distribution with its own custom build
        system -- not a rebrand or derivative of an existing distro. The
        desktop is KDE Plasma 6. The package manager is <code>spk</code>,
@@ -73,7 +87,7 @@
   </section>
 
   <section class="solutions" id="solutions">
-    <h2>What's Actually In SmechOS</h2>
+    <h2>What's inside</h2>
     <div class="feature-grid">
       <article class="feature-card">
         <div class="feature-icon feature-icon-layers" aria-hidden="true"></div>
@@ -104,25 +118,24 @@
 
   <section class="vision" id="vision">
     <div class="vision-block">
-      <h2>Our Mission</h2>
-      <p>SmechOS exists so that running an operating system doesn't mean
-         handing control of it to someone else. That means an independent
-         build system, a package manager built for this distro specifically,
-         and an installer that's actually maintained rather than assumed to
-         "just work" because it was copied from elsewhere.</p>
+      <h2>Why</h2>
+      <p>Running an operating system shouldn't mean handing control of it to
+         someone else. That means an independent build system, a package
+         manager built for this distro specifically, and an installer that's
+         actually maintained rather than assumed to "just work" because it
+         was copied from elsewhere.</p>
     </div>
     <div class="vision-block">
-      <h2>Our Story</h2>
-      <p>SmechOS is built and maintained as an active, ongoing project --
-         compiling its own kernel, building its own installer, and hosting
-         its own packages. It's still early, and the project is upfront about
-         what's finished and what isn't, rather than presenting placeholder
-         content as a finished product.</p>
+      <h2>Status</h2>
+      <p>Active, ongoing project -- compiling its own kernel, building its
+         own installer, hosting its own packages. Still early. What's
+         finished and what isn't is stated plainly below, not dressed up as
+         a finished product.</p>
     </div>
   </section>
 
   <section class="performance" id="performance">
-    <h2>Built, Not Borrowed</h2>
+    <h2>Built, not borrowed</h2>
     <p>The kernel is compiled as part of the SmechOS build pipeline, not
        shipped unmodified from somewhere else. The installer, the package
        manager, and the bootloader setup are all maintained in the same
@@ -131,27 +144,27 @@
   </section>
 
   <section class="cta" id="cta">
-    <h2>Try Release Candidate 2</h2>
-    <p>SmechOS 1.0 Release Candidate 2 is a live KDE Plasma 6.6 LTS ISO that
-       boots straight to a working desktop -- verified on real hardware. This
-       release pins to the Plasma 6.6 LTS line (backed by Techpaladin
-       Software, Kubuntu Focus, and KDE e.V. through ~2029) instead of
-       chasing the newest Plasma point release, fixes a chain of boot-critical
-       bugs found since RC1, and ships spk 2.1.0 with support for
-       <a href="https://pkg.smech.xyz">pkg.smech.xyz</a>, SmechOS's first
-       independent package repo. It's still an RC, not a stable release.</p>
-    <a class="btn btn-primary" href="downloads.html">Go to Downloads</a>
+    <h2>Release Candidate 3</h2>
+    <p>A live KDE Plasma 6.6 LTS ISO that boots straight to a working desktop
+       -- verified on real hardware. RC2's ISO built but never actually
+       reached a working desktop; this release root-causes and fixes the
+       full chain behind that (Mesa/GBM, systemd D-Bus session units, Qt
+       plugin paths, Xwayland, fontconfig) and ships spk 2.1.0 with support
+       for <a href="https://pkg.smech.xyz">pkg.smech.xyz</a>, SmechOS's first
+       independent package repo.</p>
+    <p class="cta-note">Still an RC. Not a stable release. Read the specs
+       before you write it to a disk.</p>
+    <a class="btn btn-primary" href="downloads.html">go to downloads</a>
   </section>
 
   <section class="community" id="community">
-    <h2>Get Involved</h2>
-    <p>SmechOS is an open project. Found a bug, hit a hardware issue, or
-       want to contribute? The issue tracker is the place to start --
-       bug reports, feature requests, and hardware compatibility findings
-       all go there.</p>
+    <h2>Contribute</h2>
+    <p>Open project. Found a bug, hit a hardware issue, or want to
+       contribute? The issue tracker is the place to start -- bug reports,
+       feature requests, and hardware compatibility findings all go there.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="https://github.com/Smech-Labs/smechos-issues" target="_blank" rel="noopener">Issue Tracker</a>
-      <a class="btn btn-outline" href="https://github.com/Smech-Labs" target="_blank" rel="noopener">GitHub Org</a>
+      <a class="btn btn-primary" href="https://github.com/Smech-Labs/smechos-issues" target="_blank" rel="noopener">issue tracker</a>
+      <a class="btn btn-outline" href="https://github.com/Smech-Labs" target="_blank" rel="noopener">github org</a>
     </div>
   </section>
 

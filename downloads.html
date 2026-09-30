@@ -16,12 +16,12 @@
       <span class="brand-name">SmechOS</span>
     </a>
     <nav class="nav" id="nav">
-      <a href="index.html#solutions">Solutions</a>
-      <a href="index.html#vision">Vision</a>
-      <a href="index.html#performance">Performance</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="index.html#solutions">inside</a>
+      <a href="index.html#vision">why</a>
+      <a href="index.html#cta">releases</a>
+      <a href="index.html#contact">contact</a>
     </nav>
-    <a class="btn btn-outline header-cta" href="downloads.html">Downloads</a>
+    <a class="btn btn-outline header-cta" href="downloads.html">downloads</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -42,8 +42,54 @@
 
     <article class="download-card">
       <div class="download-card-header">
-        <h3>SmechOS 1.0 Release Candidate 2</h3>
+        <h3>SmechOS 1.0 Release Candidate 3</h3>
         <span class="badge badge-beta">Release Candidate -- Latest</span>
+      </div>
+      <p>A full boot regression fix. RC2's ISO built successfully but never
+         reached a working desktop -- this release root-causes and fixes
+         every layer of that: a missing Mesa/GBM library, a never-regenerated
+         dynamic linker cache, missing systemd user D-Bus units that left the
+         entire graphical session invisible to systemd, Qt plugin paths never
+         propagated into independently-started session services, a missing
+         <code>xrdb</code>, a missing <code>libdecor</code> that silently
+         prevented Xwayland from starting at all (the real cause of
+         <code>kcminit</code>/<code>ksmserver</code> hanging for 90 seconds
+         each), and fontconfig being entirely absent from the image (every
+         piece of desktop text rendered as a tofu box). All confirmed via a
+         real, visually-verified boot to a working "Welcome to Plasma
+         Desktop" first-boot wizard, and permanently fixed in the build
+         pipeline itself, not just patched onto this ISO. Still pins to the
+         <strong>Plasma 6.6 LTS line</strong> (Frameworks 6.24) and ships
+         <strong>spk 2.1.0</strong> with
+         <a href="https://pkg.smech.xyz">pkg.smech.xyz</a> support.</p>
+      <dl class="download-meta">
+        <dt>Released</dt>
+        <dd>2026-09-30</dd>
+        <dt>Platform</dt>
+        <dd>x86_64 bare metal / VM</dd>
+        <dt>Init system</dt>
+        <dd>systemd 261</dd>
+        <dt>Desktop</dt>
+        <dd>KDE Plasma 6.6.6 LTS (KDE Frameworks 6.24.0)</dd>
+        <dt>Kernel</dt>
+        <dd>Linux 6.12.16</dd>
+        <dt>Size</dt>
+        <dd>~1.93 GiB</dd>
+        <dt>SHA-256</dt>
+        <dd><code>7038e003d5c4d99376734a5a0c26c9bd62d54979a9b339aa72a91aee163a1308</code></dd>
+        <dt>MD5</dt>
+        <dd><code>aee24563ad1b26979a1b705ca85ab790</code></dd>
+      </dl>
+      <div class="download-actions">
+        <a class="btn btn-primary" href="https://github.com/Smech-Labs/smechlabs-iso-files/releases/download/smechos-1.0-rc3/smechos-plasma-live.iso">Download .iso</a>
+        <a class="btn btn-outline" href="https://github.com/Smech-Labs/smechlabs-iso-files/releases/tag/smechos-1.0-rc3">Release Notes</a>
+      </div>
+    </article>
+
+    <article class="download-card">
+      <div class="download-card-header">
+        <h3>SmechOS 1.0 Release Candidate 2</h3>
+        <span class="badge badge-beta">Release Candidate</span>
       </div>
       <p>Pins to the <strong>Plasma 6.6 LTS line</strong> (Frameworks 6.24,
          backed by Techpaladin Software + Kubuntu Focus + KDE e.V. through
