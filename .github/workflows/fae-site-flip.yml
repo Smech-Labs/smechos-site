@@ -1,0 +1,43 @@
+name: FAE site flip
+
+# One-time scheduled merge for the Founder Anniversary Edition downloads
+# card. The `fae-release` branch already has the finished change (FAE card
+# added above the existing RC3 card, which is untouched); this job only
+# merges it into main at the scheduled time, which is what GitHub Pages
+# actually serves. Fires at 06:00 UTC (09:00 EEST) on Oct 6, 2026, same
+# moment as the sibling release-flip workflow in smechlabs-iso-files.
+#
+# Self-disables after a successful run so this doesn't silently refire on
+# Oct 6 of some future year -- cron day/month fields alone can't express
+# "just this once."
+on:
+  schedule:
+    - cron: '0 6 6 10 *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Merge fae-release into main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin fae-release
+          git merge --no-ff origin/fae-release -m "Merge fae-release: publish Founder Anniversary Edition card"
+          git push origin main
+
+      - name: Disable this workflow (one-time flip, don't refire next year)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow disable "FAE site flip" --repo ${{ github.repository }}
